@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .error-message {
+      color: red;
+    }
+    select {
+      width: 60%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  </style>
+  <script>
+    function forgotPassword() {
+      var email = document.getElementById("email").value;
+      // Code to send password reset link to the provided email or SMS
+      alert("A password reset link has been sent to your email or phone number.");
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="dilg.png" alt="DILG Logo" class="logo" align="center" width="100px" height="100px">
+    <h2>Login</h2>
+
+    <form action="login.php" method="POST">
+      <select id="municipality" name="municipality" required>
+        <option value="">Select Municipality</option>
+        <option value="Alaminos">Alaminos</option>
+        <option value="Bay">Bay</option>
+        <option value="Binan">Binan</option>
+        <option value="Cabuyao">Cabuyao</option>
+        <option value="Calauan">Calauan</option>
+        <option value="Calamba">Calamba</option>
+        <option value="Los Banos">Los Banos</option>
+        <option value="San Pablo">San Pablo</option>
+        <option value="San Pedro">San Pedro</option>
+        <option value="Sta Rosa">Sta Rosa</option>
+      </select><br><br>
+
+      <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+
+      <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+
+      <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+
+      <input type="submit" value="Login">
+    </form>
+
+    <p>Forgot your password? <a href="#" onclick="forgotPassword()">Reset here</a>.</p>
+    <p>Don't have an account? <a href="registration.html">Register here</a>.</p>
+  </div>
+</body>
+</html>
